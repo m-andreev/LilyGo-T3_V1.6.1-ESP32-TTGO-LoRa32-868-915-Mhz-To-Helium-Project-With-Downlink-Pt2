@@ -788,7 +788,7 @@ void processWork(ostime_t doWorkJobTimeStamp)
             // uint8_t payloadLength = 2;
             
             uint8_t fPort = 10;
-            uint8_t payloadLength = 16; //// TOVA TRQBVA DA SE OPRAVI!!!!!!!!!!!!!!
+            uint8_t payloadLength = 16;
 
              if(downLink == 0){
                 uint8_t tempArr[] = "SOMETHING";
