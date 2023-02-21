@@ -859,11 +859,7 @@ void processDownlink(ostime_t txCompleteTimestamp, uint8_t fPort, uint8_t* data,
         payloadCounter = 0;
         downLink = 1;
 
-        /// Trying to remove the queued uplinks:
-       // if(os_getTime() < LMIC.txend){
-            
-       // }
-    
+       
        Serial.print("Received data from downlink: ");
        uint8_t i=0;
        while(true) {
@@ -879,19 +875,8 @@ void processDownlink(ostime_t txCompleteTimestamp, uint8_t fPort, uint8_t* data,
           Serial.print((char)data[i]);
           i++;
         }
-        //doWorkCallback(&doWorkJob);
-       // for(int i=0;i<downlinkLength;i++){
-        //    payloadBuffer[i] = tempVar[i];
-       // }
+       
         Serial.println();
-        //os_clearCallback(&doWorkJob);
-        //LMIC_clrTxData();
-        ///LMIC_reset(); Reset the transmission state
-        //doWorkCallback(&doWorkJob);
-        // os_clearCallback(&doWorkJob);
-        //os_setCallback(&doWorkJob, doWorkCallback);
-       // scheduleUplink(fPort, payloadBuffer, downlinkLength);
-        //doWorkCallback(&doWorkJob);
         Serial.println("END OF DOWNLINK PART!");
         Serial.println();
         
