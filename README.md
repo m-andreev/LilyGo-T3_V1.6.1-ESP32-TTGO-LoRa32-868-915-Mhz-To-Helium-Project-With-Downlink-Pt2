@@ -1,3 +1,5 @@
+In this project the idea is, when a downlink with a text message is sent, that message to be sent as uplink, until another downlink with another message is sent again. If no downlink is sent at all, the uplink will be the default one.
+
 This repository contains LMIC-node, an example LoRaWAN application for a node for The Things Network.  
 Get your node quickly up and running with LMIC-node.
 
