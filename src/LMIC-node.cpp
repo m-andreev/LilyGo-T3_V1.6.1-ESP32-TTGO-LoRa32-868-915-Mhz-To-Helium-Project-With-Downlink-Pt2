@@ -801,20 +801,11 @@ void processWork(ostime_t doWorkJobTimeStamp)
             }
             else if(downLink == 1)
             {
-                //os_clearCallback(&LMIC.osjob);
                 payloadLength = downlinkLength;
                 for(int i=0;i<downlinkLength;i++){
                     payloadBuffer[i] = tempVar[i];
                 }
-                    // payloadBuffer[i] = (char)LMIC.frame[LMIC.dataBeg + i];
-                  
-                      //os_clearCallback(&doWorkJob);
-                      //unlinkjob(getJobQueue(job), job);
-                     // os_setCallback(&doWorkJob, doWorkCallback);
-                     //os_clearCallback(&LMIC.osjob);
                     Serial.println("Before Scheduling...");
-                    //doWorkCallback(&doWorkJob);
-                    //LMIC_clrTxData();
                     scheduleUplink(fPort, payloadBuffer, payloadLength);
                      Serial.println("After Scheduling...");
                     downLink = 0;
